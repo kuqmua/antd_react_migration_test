@@ -7,6 +7,7 @@ import './App.css';
 // import 'antd/dist/antd.css';
 // import { Line, Circle } from 'rc-progress';
 import { Line, Circle } from './progress';
+import Checkbox from './checkbox';
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
       {/* <Badge count={5}/>
       <Alert message="fddfg"/> */}
       {/* <BackTop /> */}
-      <Line percent={10} strokeWidth={4} strokeColor="#D3D3D3" trailColor="#D9D9D9" />
-      <Circle percent={25} strokeWidth={4} strokeColor="#D3D3D3" trailColor="#D9D9D9" />
+      <div>
+        <Checkbox value={"kekwkw"} />
+      </div>
+
+      {/* <Line percent={10} strokeWidth={4} strokeColor="#D3D3D3" trailColor="#D9D9D9" /> */}
+      {/* <Circle percent={25} strokeWidth={4} strokeColor="#D3D3D3" trailColor="#D9D9D9" /> */}
       {/* <div style={{"backgroundColor": "red", width: "300px", "height": "1500px"}}>fgfgh</div> */}
       {/* <a href="#" className="head-example" /> */}
       {/* </Badge> */}

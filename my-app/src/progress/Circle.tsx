@@ -28,6 +28,7 @@ const getCircleStyle = (
     strokeWidth: any,
     stepSpace = 0,
 ) => {
+    console.log("gperimeterWithoutGap", perimeterWithoutGap);
     const offsetDeg = (offset / 100) * 360 * ((360 - gapDegree) / 360);
     let fff: number = gapPosition as any;
     const positionDeg =
@@ -79,6 +80,9 @@ const Circle: React.FC<ProgressProps> = ({
     percent,
     ...restProps
 }) => {
+
+    console.log('first trailWidth', trailWidth);
+    console.log('strokeColor', strokeColor)
     const mergedId = useId(id);
     const gradientId = `${mergedId}-gradient`;
     const radius = VIEW_BOX_SIZE / 2 - (strokeWidth as any) / 2;
@@ -102,6 +106,7 @@ const Circle: React.FC<ProgressProps> = ({
     );
     const percentList = toArray(percent);
     const strokeColorList = toArray(strokeColor);
+    console.log('strokeColorList', strokeColorList)
     const gradient = strokeColorList.find((color) => color && typeof color === 'object');
 
     const paths = useTransitionDuration();
@@ -197,7 +202,6 @@ const Circle: React.FC<ProgressProps> = ({
             );
         });
     };
-
     return (
         <svg
             className={classNames(`${prefixCls}-circle`, className)}
